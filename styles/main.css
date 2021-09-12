@@ -8,6 +8,7 @@ body {
   justify-content: center;
   align-items: center;
   background: linear-gradient(#af67e9, #6565e7);
+  color: #4a4b5e;
 }
 
 .card {
@@ -42,6 +43,55 @@ body {
 .left .wrapper {
   width: 100%;
   overflow: hidden;
+}
+
+.right {
+  margin: 50px 0;
+  padding-right: 20px;
+}
+.right h2 {
+  font-size: 2rem;
+}
+.right .faqs {
+  width: 90%;
+  padding-right: 25px;
+}
+.right details {
+  font-size: 1.1rem;
+  border-bottom: 1px solid #e7e7e9;
+  margin: 20px auto;
+}
+.right summary:hover {
+  cursor: pointer;
+}
+.right details > summary {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+.right summary::-webkit-details-marker {
+  display: none;
+}
+.right summary::after {
+  content: url("../images/icon-arrow-down.svg");
+  font-size: 1rem;
+  display: inline-block;
+  transition-duration: 0.5s;
+}
+.right details[open] {
+  font-weight: bold;
+}
+.right details[open] p {
+  font-weight: normal;
+  font-size: 0.9rem;
+  color: #787887;
+}
+.right details[open] summary:after {
+  content: url("../images/icon-arrow-down.svg");
+  font-size: 1.2rem;
+  display: inline-block;
+  transform: rotate(180deg);
+  transition-duration: 0.5s;
 }
 
 /*# sourceMappingURL=main.css.map */

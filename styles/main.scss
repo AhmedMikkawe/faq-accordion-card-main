@@ -8,6 +8,7 @@ body{
   justify-content: center;
   align-items: center;
   background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  color: hsl(237, 12%, 33%);
 }
 .card{
   display: flex;
@@ -40,4 +41,57 @@ body{
     width: 100%;
     overflow: hidden;
   }
+}
+.right{
+  margin: 50px 0;
+  padding-right: 20px;
+  h2{
+    font-size: 2rem;
+  }
+  .faqs{
+    width: 90%;
+    padding-right:25px ;
+  }
+  details{
+    font-size: 1.1rem;
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+    margin: 20px auto;
+
+  }
+  summary:hover{
+    cursor: pointer;
+  }
+  details>summary {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+  }
+  summary::-webkit-details-marker {
+    display: none
+  }
+
+  summary::after {
+    content: url("../images/icon-arrow-down.svg");
+    font-size: 1rem;
+    display: inline-block;
+    transition-duration: 0.5s;
+  }
+  details[open]{
+    font-weight: bold;
+    p{
+      font-weight: normal;
+      font-size: 0.9rem;
+      color: hsl(240, 6%, 50%);
+    }
+    summary:after {
+      content: url("../images/icon-arrow-down.svg");
+      font-size: 1.2rem;
+      display: inline-block;
+      transform: rotate(180deg);
+      transition-duration: 0.5s;
+
+    }
+
+  }
+
 }
