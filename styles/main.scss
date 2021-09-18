@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+*{
+  box-sizing: border-box;
+}
 body{
   font-family: 'Kumbh Sans', sans-serif;
   font-size: 12px;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
   color: hsl(237, 12%, 33%);
 }
 .card{
+  margin: 100px auto 0px;
   display: flex;
   max-width: 700px;
   min-height: 350px;
@@ -60,6 +60,7 @@ body{
   }
   summary:hover{
     cursor: pointer;
+    color : #C68C81;
   }
   details>summary {
     list-style: none;
@@ -94,4 +95,40 @@ body{
 
   }
 
+}
+@media screen and (max-width: 700px){
+.card{
+  position: relative;
+  flex-direction: column;
+  margin: 195px auto 0;
+  max-width: 325px;
+  div{
+    width: 100%;
+  }
+}
+  .left{
+    position: absolute;
+    top: -135px;
+    img.woman{
+      width: 80%;
+      position: relative;
+      left: 10%;
+      //top: -175px;
+    }
+    img.box{
+      width: 150px;
+      display: block;
+      position: absolute;
+      left: 0;
+      //top: -124px;
+    }
+    .wrapper{
+      width: 100%;
+      overflow: visible;
+    }
+  }
+  .right{
+    margin: 50px 10px;
+
+  }
 }
